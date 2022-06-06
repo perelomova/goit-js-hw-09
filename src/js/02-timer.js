@@ -92,7 +92,7 @@ const startTimer = () => {
 const stopTimer = () => {
   clearInterval(timerId);
   refs.startBtn.textContent = 'Start';
-  // timerId = 0;
+  timerId = 0;
 }
 
 const handleButtonClick = () => {
