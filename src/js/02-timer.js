@@ -3,6 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
 const refs = {
+  input: document.querySelector('#datetime-picker'),
   startBtn: document.querySelector('[data-start]'),
   days: document.querySelector('[data-days]'),
   hours: document.querySelector('[data-hours]'),
@@ -85,6 +86,7 @@ function convertMs(ms) {
 }
 
 const startTimer = () => {
+  refs.input.disabled = true;
   timerId = setInterval(getTimerValues, 1000);
   refs.startBtn.textContent = 'Stop';
 }
